@@ -7,7 +7,6 @@ import icons from '@/constants/icons';
 import Comment from '@/components/Comment';
 import { useAppwrite } from '@/lib/useAppwrite';
 import { getPropertybyId } from '@/lib/appwrite';
-import { Models } from 'react-native-appwrite';
 
 const facilitiesIcons: Record<"Laundry" | "Parking" | "Gym" | "Wifi" | "Pet-friendly", any> = {
     "Laundry": icons.laundry,
