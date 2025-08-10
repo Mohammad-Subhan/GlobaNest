@@ -141,3 +141,22 @@ export async function getProperties({ filter, query, limit }: {
         return [];
     }
 }
+
+export async function getPropertybyId({ id }: { id: string }) {
+    try {
+        const result = await databases.getDocument(
+            config.databaseId!,
+            config.propertiesCollectionId!,
+            id,
+        );
+
+        if (result) {
+            return result;
+        }
+
+        return null;
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
+}
